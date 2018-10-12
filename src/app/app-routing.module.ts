@@ -15,7 +15,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'details',
+    path: 'details/:id',
     children: [
       
     ],
