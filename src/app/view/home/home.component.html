@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="container container-bg">
+    <div class="row">
+     <div class="col-4" *ngFor="let pokemon of pokemons">
+       <div class="caja centrarCaja">
+         <a href="details/pokemon._id" id="pokemon_id"><img src="{{pokemon.art_url}}" width="200px" height="200px"></a>
+       </div>
+       <div class="row">
+         <h1 style="margin-top:250px">{{pokemon.name}}</h1>
+         <h1 style="margin-top:250px; margin-left: 20px">({{pokemon.pkdx_id}})</h1>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="body">
+  <div class="container container-bg">
+    <div class="row" *ngFor="let pokemon of pokemons">
+      <div class="col-8" *ngIf="pokemon._id===pokemon_id">
+        <h5>{{pokemon.description}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
