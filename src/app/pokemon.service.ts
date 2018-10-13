@@ -4653,4 +4653,5 @@ export class PokemonService {
     ]
   
   }
+
 }

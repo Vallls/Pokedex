@@ -1,8 +1,10 @@
 <div class="body">
   <div class="container container-bg">
-    <div class="row" *ngFor="let pokemon of pokemons">
+    <div class="row">
       <div class="col-8">
-        <h5>{{pokemon.description}}</h5>
+        <div class="row row-bg"><h5 style="margin-top:50px">{{pokemon.name}}</h5></div>
+        <div class="row row-bg"><h5 style="margin-top:50px">{{pokemon.description}}</h5></div>
+        <div class="row row-bg"><h5 style="margin-top:50px">{{pokemon.types}}</h5></div>
       </div>
     </div>
   </div>
