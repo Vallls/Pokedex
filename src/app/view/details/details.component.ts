@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { PokemonService } from '../../pokemon.service';
 
 @Component({
   selector: 'app-details',
@@ -7,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+
+  public pokemon:object;
 
   pokemons = [
     {
@@ -4652,9 +4655,11 @@ export class DetailsComponent implements OnInit {
     }
   ]
 
-  constructor( private router: Router) {
-   
+  constructor( private router: Router, private pokemonService: PokemonService) {
+      this.pokemon= this.pokemonService.pokemon;
    }
+
+
 
   ngOnInit() {
   

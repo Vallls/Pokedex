@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PokemonService } from '../../pokemon.service';
+import { ObjectOrientedRenderer3 } from '@angular/core/src/render3/interfaces/renderer';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,17 @@ import { PokemonService } from '../../pokemon.service';
 })
 export class HomeComponent implements OnInit {
 
+  @Input() poke: object;
+
   public pokemons = [];
 
-  constructor(private pokemonService: PokemonService) { }
+  constructor(private pokemonService: PokemonService) { 
+    
+  }
+  estePokemon(){
+    this.pokemonService.pokemonSeleccionado(this.poke);
+  }
+
 
   ngOnInit() {
     this.getPoke();
