@@ -23,4 +23,7 @@ export class DetailsComponent implements OnInit {
     this.pokemons = this.pokemonService.getpoke();
   }
 
+  getid(){
+    return this.pokemonService.getpoke.name;
+  }
 }

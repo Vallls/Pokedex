@@ -1,5 +1,6 @@
 <div class="body">
-  <div class="container container-bg">
+  <app-navbar></app-navbar>
+  <div class="container container-bg" *ngFor="let pokemon of pokemons">
     <div class="row">
       <div class="col-8">
         <div class="row row-bg"><h5 style="margin-top:50px">{{pokemon.name}}</h5></div>
