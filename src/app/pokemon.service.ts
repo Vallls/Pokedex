@@ -4,8 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PokemonService {
+
+  public pokemon: object;
   
   constructor() { }
+
+  pokemonSeleccionado(p: object){
+    this.pokemon= p;
+  }
 
   getpoke(){
     return  [
